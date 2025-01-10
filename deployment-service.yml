@@ -28,7 +28,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: shaikmustafa/emailservice:latest
+        image: gsaiadhinathareddy/emailservice:v1
         ports:
         - containerPort: 8080
         env:
@@ -81,7 +81,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: shaikmustafa/checkoutservice:latest
+          image: gsaiadhinathareddy/checkoutservice:v1
           ports:
           - containerPort: 5050
           readinessProbe:
@@ -143,7 +143,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: shaikmustafa/recommendationservice:latest
+        image: gsaiadhinathareddy/recommendationservice:v1
         ports:
         - containerPort: 8080
         readinessProbe:
@@ -200,7 +200,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: shaikmustafa/frontend:latest
+          image: gsaiadhinathareddy/frontend:v1
           ports:
           - containerPort: 8080
           readinessProbe:
