@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'dockerhub-cred') {
-                        sh 'docker build -t gsaiadhinathareddy/service:v1 .'
+                        sh 'docker build -t gsaiadhinathareddy/cartservice:v1 .'
                     }
                 }
             }
@@ -15,7 +15,7 @@ pipeline {
             step {
                 script {
                     withDockerRegistry(credentialsId: 'dockerhub-cred') {
-                        sh 'docker push gsaiadhinathareddy/service:v1'
+                        sh 'docker push gsaiadhinathareddy/cartservice:v1'
                     }
                 }
             }
